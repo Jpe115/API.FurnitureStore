@@ -53,10 +53,10 @@ jobs:
             ${{ runner.os }}-nuget-
 
       - name: Build with dotnet
-        run: dotnet build --configuration Release
+        run: dotnet build --configuration Release --project API.FurnitureStore.API/API.FurnitureStore.API.csproj
 
       - name: dotnet publish
-        run: dotnet publish --configuration Release --output ./publish
+        run: dotnet publish API.FurnitureStore.API/API.FurnitureStore.API.csproj --configuration Release --output ./publish
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
