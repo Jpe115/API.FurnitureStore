@@ -22,13 +22,13 @@ jobs:
           dotnet-version: '6.0'  # Cambia a la versión necesaria
 
       - name: Build with dotnet
-        run: dotnet build --configuration Release --project API.FurnitureStore.API/API.FurnitureStore.API.csproj
+        run: dotnet build --configuration Release API.FurnitureStore.API/API.FurnitureStore.API.csproj
 
       - name: dotnet publish
         run: dotnet publish API.FurnitureStore.API/API.FurnitureStore.API.csproj --configuration Release --output ./publish
 
       - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: .net-app
           path: ./publish
