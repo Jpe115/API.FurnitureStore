@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.FurnitureStore.API.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ClientsController : ControllerBase

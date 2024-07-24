@@ -8,7 +8,7 @@ using Microsoft.Extensions.FileProviders;
 
 namespace API.FurnitureStore.API.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
